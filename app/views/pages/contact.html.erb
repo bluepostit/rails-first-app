@@ -1,0 +1,21 @@
+<h1>Contact Us</h1>
+
+<p>We'd love to hear from you</p>
+
+<h2>Our team</h2>
+
+<form action="<%= contact_path %>" method="get">
+  <input
+    type="text"
+    name="member"
+    placeholder="Who are you looking for?"
+    value="<%= @member %>"
+  >
+  <input type="submit" value="Search!">
+</form>
+
+<ul>
+  <% @team.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ul>
